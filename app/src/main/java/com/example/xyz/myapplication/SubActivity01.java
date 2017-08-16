@@ -1,10 +1,12 @@
 package com.example.xyz.myapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 /**
@@ -28,4 +30,11 @@ public class SubActivity01 extends AppCompatActivity {
 
         Log.d(TAG, "onCreate: SubActivity01이 실행되었습니다.");
     }
+
+    void onButtonClick(View v) {
+        Intent intent = new Intent(this, SubActivity02.class);
+        startActivity(intent);
+        Log.d(TAG, "onButtonClick: SubActivity02을 실행시켰습니다.");
+    }
+
 }
